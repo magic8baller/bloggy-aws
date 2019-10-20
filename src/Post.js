@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import EditPost from './editPost';
 class Post extends Component {
 
 	componentDidMount () {
@@ -17,9 +17,8 @@ class Post extends Component {
 					</time>
 					<h1>{post.title}</h1>
 					<p >{post.body}</p>
-
 					<br />
-
+					<EditPost {...post}/>
 				</div>
 			)
 		})
