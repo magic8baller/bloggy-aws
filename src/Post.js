@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+// import DeletePost from './deletePost'
+import EditPost from './editPost'
 
 class Post extends Component {
 
 	componentDidMount () {
-		this.props.subscribeToMore();
+		this.props.subscribeToMore()
 	}
 
 	render () {
@@ -11,7 +13,7 @@ class Post extends Component {
 
 		return items.map((post) => {
 			return (
-				<div key={post.id}>
+				<div style={rowStyle} key={post.id}>
 					<time style={{fontStyle: "italic", float: "right"}} dateTime={post.createdAt}>
 						{"Created on "}{new Date(post.createdAt).toDateString()}
 					</time>
@@ -20,11 +22,32 @@ class Post extends Component {
 
 					<br />
 
+					<EditPost {...post} />
+					{/* <DeletePost {...post} /> */}
+
+
 				</div>
+
 			)
 		})
-	}
 
+	}
 }
 
-export default Post;
+// const btnStyle = {
+// 	margintop: '12px',
+// 	background: '#d4d4',
+// 	color: '#fff',
+// 	border: 'none',
+// 	padding: '5px 9px',
+// 	cursor: 'pointer',
+// 	float: 'top'
+// }
+const rowStyle = {
+	background: '#f4f4f4',
+	padding: '10px',
+	border: '1px #ccc dotted',
+	margin: '14px'
+
+}
+export default Post

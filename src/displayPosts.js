@@ -1,9 +1,9 @@
-import gql from 'graphql-tag';
-import React, {Component} from 'react';
-import {Query} from 'react-apollo';
-import {listPosts} from './graphql/queries';
-import {onCreatePost} from './graphql/subscriptions';
-import Post from './Post';
+import gql from 'graphql-tag'
+import React, {Component} from 'react'
+import {Query} from 'react-apollo'
+import {listPosts} from './graphql/queries'
+import {onCreatePost} from './graphql/subscriptions'
+import Post from './Post'
 
 class DisplayPosts extends Component {
 
@@ -17,11 +17,13 @@ class DisplayPosts extends Component {
 					listPosts: {
 						...prev.listPosts,
 						items: [newPostData, ...prev.listPosts.items]
+						//items: [ ...prev.listPosts.items, newPostData ] this will put oldest one at the top
 					}
 				})
 			}
 		})
 	}
+
 
 	render () {
 		return (
@@ -37,6 +39,9 @@ class DisplayPosts extends Component {
 							this.subsCribeNewPosts(subscribeToMore)} />
 					}}
 				</Query>
+
+
+
 			</div>
 		)
 	}
