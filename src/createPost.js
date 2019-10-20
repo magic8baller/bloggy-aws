@@ -1,9 +1,9 @@
 import gql from "graphql-tag";
-import React from "react";
+import React, {Component} from "react";
 import {Mutation} from "react-apollo";
 import {createPost} from "./graphql/mutations";
 
-class CreatePost extends React.Component {
+class CreatePost extends Component {
 	handleSubmit = (e, createPost) => {
 		e.preventDefault();
 		createPost({
@@ -47,7 +47,7 @@ class CreatePost extends React.Component {
 											required
 										/>
 									</div>
-									<button>{loading ? "Yes boss..." : "Create Post"}
+									<button>{loading ? "hold ur horses im commin" : "Create Post"}
 									</button>
 								</form>
 								{error && <p>{error.message}</p>}
