@@ -21,8 +21,8 @@ class CreatePost extends React.Component {
 	};
 	render () {
 		return (
-			<div style={{textAlign: "center"}}>
-				<h1>Create post</h1>
+			<div id="centered">
+				<h3>Create post</h3>
 
 				<Mutation mutation={gql(createPost)}>
 					{(createPost, {data, loading, error}) => {
