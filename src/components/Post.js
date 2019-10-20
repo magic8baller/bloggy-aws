@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-// import DeletePost from './deletePost'
+import DeletePost from './deletePost'
 import EditPost from './editPost'
 
 class Post extends Component {
@@ -23,7 +23,7 @@ class Post extends Component {
 					<br />
 
 					<EditPost {...post} />
-					{/* <DeletePost {...post} /> */}
+					<DeletePost {...post} />
 
 
 				</div>

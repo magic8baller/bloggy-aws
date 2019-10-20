@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 import React, {Component} from "react";
 import {Mutation} from "react-apollo";
-import {createPost} from "./graphql/mutations";
+import {createPost} from "../graphql/mutations";
 
 class CreatePost extends Component {
 	handleSubmit = (e, createPost) => {

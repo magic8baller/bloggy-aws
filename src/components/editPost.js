@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 import React, {Component} from 'react'
 import {Mutation} from 'react-apollo'
-import {updatePost} from './graphql/mutations'
+import {updatePost} from '../graphql/mutations'
 
 class EditPost extends Component {
 	state = {

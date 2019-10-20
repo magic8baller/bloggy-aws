@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import CreatePost from './createPost';
-import DisplayPosts from './displayPosts.js';
+import CreatePost from './components/createPost';
+import DisplayPosts from './components/displayPosts.js';
 
 function App () {
 	return (
