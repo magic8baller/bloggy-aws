@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
-
-function App() {
-  return (
-		<div>Γεια σου κόσμε</div>
-  );
+import CreatePost from './createPost';
+function App () {
+	return (
+		<div>
+			<h1>Γεια σου κόσμε</h1>
+			<CreatePost />
+		</div>
+	);
 }
 
 export default App;
