@@ -12,7 +12,7 @@ const Poem = () => {
 						return (
 							<div class="card" style={{width: '70%', height: '60%', margin: '1rem 2rem 1rem 6.4rem'}}>
 								<div className="card-body" key={poem.id}>
-									<h5 className="card-title" style={{color: '#001', fontWeight: 'bold'}}><u><em>{poem.title}</em></u></h5>
+									<h5 className="card-title" style={{color: '#001', fontWeight: 'bold'}}><u><em>{poem.title}</em></u><br /><span style={{fontSize: '1rem'}}>{poem.createdAt}</span></h5>
 									<p className="card-text" style={{whiteSpace: 'pre', fontWeight: 'bold', color: '#009'}}>{poem.body}</p>
 								</div>
 							</div>
